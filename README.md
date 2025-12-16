@@ -81,21 +81,34 @@ each case. Take a screenshot of your graph and put them here by modifying this f
 it to this repository.
 
 Insertion, search, and deletion running time (already sorted):
-
-![Firefly picture of a cat 86147](https://github.com/user-attachments/assets/8b2d008e-3011-4979-97b8-fa2e9886a01a)
-
-
+![Screenshot 2025-12-15 at 5.47.42 PM.png](Graphs/Screenshot%202025-12-15%20at%205.47.42%E2%80%AFPM.png)
 Insertion, search, and deletion running time (shuffled):
-
+![Screenshot 2025-12-15 at 5.47.53 PM.png](Graphs/Screenshot%202025-12-15%20at%205.47.53%E2%80%AFPM.png)
 Insertion, search, and deletion running time (reversed):
-
+![Screenshot 2025-12-15 at 5.48.11 PM.png](Graphs/Screenshot%202025-12-15%20at%205.48.11%E2%80%AFPM.png)
 ## 5. **Document your Dataset and Results**
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
 how it compares to the theoretical performance of the hash table operations.
 
-Dataset Source: // FINISH ME
-Dataset Modifications ("None" if unchanged): // FINISH ME
-Result Analysis: // FINISH ME
+Dataset Source: [horror_movies.csv](horror_movies.csv)
+Dataset Modifications ("None" if unchanged): None aside from trimming whitespace
+Result Analysis:
+The experimental results show that the total running time for insert, search,
+and delete operations increases approximately linearly as the number of
+elements N increases. This is expected because each experiment performs N
+hash table operations, and each individual operation runs in O(1) average
+time.
+
+The order of the input data (already sorted, shuffled, or reversed) had little
+impact on performance, which is consistent with the theoretical behavior of
+hash tables. Small differences between cases are likely due to JVM warm-up,
+cache effects, and randomness in hash code distribution rather than input
+order.
+
+Overall, the results closely match the expected average-case performance of a
+separate chaining hash table.
+
+
 
 ## Submission:
 
